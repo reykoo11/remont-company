@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>МастерРемонт — ремонт квартир и домов под ключ</title>
+  <meta name="description" content="Найдём мастера и сделаем ремонт квартиры или дома: косметический, капитальный, электрика, сантехника, отделка. Бесплатный расчёт стоимости онлайн." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231E3A5F'/%3E%3Cpath d='M20 44l14-14m0 0l4-4a4 4 0 015.6 5.6l-4 4m-5.6-5.6l5.6 5.6M20 44l-4 4' stroke='%23F97316' stroke-width='4' stroke-linecap='round' fill='none'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        Мастер<span class="logo__accent">Ремонт</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a href="#services" class="nav__link">Услуги</a></li>
+          <li><a href="#portfolio" class="nav__link">Портфолио</a></li>
+          <li><a href="#calculator" class="nav__link">Калькулятор</a></li>
+          <li><a href="#reviews" class="nav__link">Отзывы</a></li>
+          <li><a href="#contact" class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+70000000000" class="header__phone">
+          <i class="ph ph-phone" aria-hidden="true"></i> +7 (000) 000-00-00
+        </a>
+        <a href="#contact" class="btn btn--primary btn--sm">Рассчитать стоимость</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+          <i class="ph ph-list" id="menuIconOpen" aria-hidden="true"></i>
+          <i class="ph ph-x" id="menuIconClose" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="badge"><i class="ph ph-medal" aria-hidden="true"></i> 500+ ремонтов сдано в срок</span>
+          <h1 class="hero__title">Ремонт квартиры или дома — <span class="text-accent">без стресса и сюрпризов</span></h1>
+          <p class="hero__subtitle">
+            Подберём проверенную бригаду, зафиксируем смету и сроки. Вы получаете
+            прозрачный ремонт под ключ — от косметического до капитального.
+          </p>
+          <div class="hero__actions">
+            <a href="#calculator" class="btn btn--primary btn--lg">
+              Рассчитать стоимость <i class="ph ph-calculator" aria-hidden="true"></i>
+            </a>
+            <a href="#portfolio" class="btn btn--outline btn--lg">Смотреть примеры работ</a>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat"><span>7 лет</span>на рынке</div>
+            <div class="hero__stat"><span>500+</span>объектов</div>
+            <div class="hero__stat"><span>4.9 ★</span>средний рейтинг</div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal" style="--reveal-delay:0.15s">
+          <div class="hero__card">
+            <div class="hero__card-row"><i class="ph ph-paint-roller" aria-hidden="true"></i> Косметический ремонт</div>
+            <div class="hero__card-row"><i class="ph ph-hammer" aria-hidden="true"></i> Капитальный ремонт</div>
+            <div class="hero__card-row"><i class="ph ph-lightning" aria-hidden="true"></i> Электрика</div>
+            <div class="hero__card-row"><i class="ph ph-drop" aria-hidden="true"></i> Сантехника</div>
+            <div class="hero__card-row"><i class="ph ph-square-split-horizontal" aria-hidden="true"></i> Отделка</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <p class="section-eyebrow reveal">Услуги</p>
+        <h2 class="section-title reveal" id="services-title">Виды ремонта</h2>
+        <p class="section-subtitle reveal">Работаем по договору с фиксированной сметой и сроками.</p>
+        <div class="grid grid--4" id="servicesGrid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section section--alt" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <p class="section-eyebrow reveal">Портфолио</p>
+        <h2 class="section-title reveal" id="portfolio-title">Наши работы «до и после»</h2>
+        <p class="section-subtitle reveal">Реальные объекты, сроки и примерная стоимость.</p>
+        <div class="grid grid--3" id="portfolioGrid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="section" id="calculator" aria-labelledby="calc-title">
+      <div class="container">
+        <p class="section-eyebrow reveal">Калькулятор</p>
+        <h2 class="section-title reveal" id="calc-title">Узнайте примерную стоимость за 10 секунд</h2>
+        <p class="section-subtitle reveal">Точную смету подготовим после бесплатного замера.</p>
+
+        <div class="calculator reveal">
+          <div class="calculator__controls">
+            <div class="form-field">
+              <label for="calcType">Тип ремонта</label>
+              <select id="calcType">
+                <option value="cosmetic">Косметический</option>
+                <option value="capital">Капитальный</option>
+                <option value="electric">Электрика</option>
+                <option value="plumbing">Сантехника</option>
+                <option value="finishing">Отделка</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="calcArea">Площадь, м²</label>
+              <input type="range" id="calcArea" min="20" max="200" value="60" step="5" />
+              <output id="calcAreaValue" class="calculator__area-value">60 м²</output>
+            </div>
+          </div>
+
+          <div class="calculator__result">
+            <span class="calculator__result-label">Примерная стоимость</span>
+            <span class="calculator__result-value" id="calcResult">от 180 000 ₽</span>
+            <span class="calculator__result-note">Финальная цена — после бесплатного замера мастером</span>
+            <a href="#contact" class="btn btn--primary btn--full">Оставить заявку на этот расчёт</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section section--alt" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <p class="section-eyebrow reveal">Отзывы</p>
+        <h2 class="section-title reveal" id="reviews-title">Что говорят клиенты</h2>
+        <div class="grid grid--3" id="reviewsGrid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT / FORM -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <p class="section-eyebrow">Заявка на ремонт</p>
+          <h2 class="section-title" id="contact-title">Оставьте заявку — перезвоним за 15 минут</h2>
+          <p class="section-subtitle">Бесплатный замер и консультация по смете.</p>
+          <ul class="contact-list">
+            <li><i class="ph ph-phone" aria-hidden="true"></i> <a href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+            <li><i class="ph ph-envelope-simple" aria-hidden="true"></i> <a href="mailto:info@masterremont.ru">info@masterremont.ru</a></li>
+            <li><i class="ph ph-map-pin" aria-hidden="true"></i> <span>Работаем по всему городу и области</span></li>
+          </ul>
+        </div>
+
+        <form class="card-form reveal" id="requestForm" style="--reveal-delay:0.1s" novalidate>
+          <div class="form-field">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required />
+            <span class="form-error" id="nameError" role="alert"></span>
+          </div>
+          <div class="form-field">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required />
+            <span class="form-error" id="phoneError" role="alert"></span>
+          </div>
+          <div class="form-field">
+            <label for="repairType">Тип ремонта</label>
+            <select id="repairType" name="repairType">
+              <option value="cosmetic">Косметический</option>
+              <option value="capital">Капитальный</option>
+              <option value="electric">Электрика</option>
+              <option value="plumbing">Сантехника</option>
+              <option value="finishing">Отделка</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="callTime">Удобное время звонка</label>
+            <select id="callTime" name="callTime">
+              <option value="morning">Утро (9:00–12:00)</option>
+              <option value="afternoon">День (12:00–17:00)</option>
+              <option value="evening">Вечер (17:00–21:00)</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            Отправить заявку <i class="ph ph-paper-plane-tilt" aria-hidden="true"></i>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> МастерРемонт. Ремонт под ключ.</p>
+      <button class="back-to-top" id="backToTop" type="button" aria-label="Наверх"><i class="ph ph-arrow-up" aria-hidden="true"></i></button>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
