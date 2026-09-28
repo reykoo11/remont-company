@@ -8,9 +8,9 @@ const SERVICES = [
 ];
 
 const PROJECTS = [
-  { title: "Косметический ремонт, 54 м²", desc: "Однокомнатная квартира — обновление за 12 дней.", price: "≈ 320 000 ₽" },
-  { title: "Капитальный ремонт, 72 м²", desc: "Полная перепланировка двухкомнатной квартиры.", price: "≈ 890 000 ₽" },
-  { title: "Отделка дома, 140 м²", desc: "Загородный дом — чистовая отделка под ключ.", price: "≈ 1 450 000 ₽" },
+  { title: "Косметический ремонт, 54 м²", desc: "Однокомнатная квартира — обновление за 12 дней.", price: "≈ 320 000 ₽", image: "assets/portfolio-kitchen.jpg" },
+  { title: "Капитальный ремонт, 72 м²", desc: "Полная перепланировка двухкомнатной квартиры.", price: "≈ 890 000 ₽", image: "assets/portfolio-bathroom.jpg" },
+  { title: "Отделка дома, 140 м²", desc: "Загородный дом — чистовая отделка под ключ.", price: "≈ 1 450 000 ₽", image: "assets/portfolio-bedroom.jpg" },
 ];
 
 const REVIEWS = [
@@ -47,8 +47,8 @@ function renderProjects() {
   renderList("portfolioGrid", PROJECTS, (p, i) => `
     <article class="project-card reveal" role="listitem" style="--reveal-delay:${i * 0.1}s">
       <div class="before-after">
-        <div class="before-after__side before-after__side--before"><span>До</span></div>
-        <div class="before-after__side before-after__side--after"><span>После</span></div>
+        <div class="before-after__side before-after__side--before" style="background-image:url('${p.image}')"><span>До</span></div>
+        <div class="before-after__side before-after__side--after" style="background-image:url('${p.image}')"><span>После</span></div>
       </div>
       <div class="project-card__body">
         <h3 class="project-card__title">${p.title}</h3>
